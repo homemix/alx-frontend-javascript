@@ -1,5 +1,5 @@
 
 
-declare function insertRow(row: RowElement): RowID;
-declare function deleteRow(rowID): void;
+declare function insertRow(row: RowElement): number;
+declare function deleteRow(rowId): void;
 declare function updateRow(rowId: RowID, row: RowElement): RowID;
