@@ -63,10 +63,10 @@ class StudentClass {
         this.firstName = firstName;
         this.lastName = lastName;
     }
-    workOnHomework():string{
+    workOnHomework(): string{
         return `Currently working`;
     }
-    displayName():string{
+    displayName(): string{
         return `${this.firstName}`
     }
 }
