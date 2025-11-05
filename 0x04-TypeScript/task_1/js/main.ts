@@ -4,13 +4,15 @@ interface Teacher {
     fullTimeEmployee: boolean;
     yearsOfExperience?: number;
     location: string;
+
     [key: string]: any;
 }
 
-interface Director extends Teacher{
+interface Director extends Teacher {
     numberOfReports: number;
 }
-interface Directors extends Teacher{
+
+interface Directors extends Teacher {
     numberOfReports: number;
 }
 
@@ -36,7 +38,7 @@ interface printTeacherFunction {
     (teacher: { firstName: string; lastName: string }): string;
 }
 
-const printTeacher: printTeacherFunction = ({firstName,lastName}) => {
+const printTeacher: printTeacherFunction = ({firstName, lastName}) => {
     return `${firstName.charAt(0)}. ${lastName}`;
 };
 
@@ -45,5 +47,26 @@ const printTeacher: printTeacherFunction = ({firstName,lastName}) => {
 // }
 
 
-const result = printTeacher({ firstName: 'John', lastName: 'Doe' });
+const result = printTeacher({firstName: 'John', lastName: 'Doe'});
 console.log(result);
+
+interface Student {
+    firstName: string;
+    lastName: string;
+}
+
+class StudentClass {
+    firstName: string;
+    lastName: string;
+
+    constructor(firstName: string, lastName: string) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+    workOnHomework(){
+        return `Currently working`;
+    }
+    displayName(){
+        return `${this.firstName}`
+    }
+}
